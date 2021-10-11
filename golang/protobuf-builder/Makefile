@@ -12,7 +12,13 @@ install-protocol-buffer:
 	apt install -y protobuf-compiler
 	protoc --version
 
+use-ssh-for-bitbucket:
+	git config \
+    --global \
+    url."git@bitbucket.org".insteadOf \
+    "https://bitbucket.org"
 
 build:
 	make install-protocol-buffer
 	make get-protocol-buffer-dependencies
+	make use-ssh-for-bitbucket
