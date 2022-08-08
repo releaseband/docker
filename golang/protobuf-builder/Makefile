@@ -18,7 +18,14 @@ use-ssh-for-bitbucket:
     url."git@bitbucket.org".insteadOf \
     "https://bitbucket.org"
 
-build:
+
+install:
+	apt-get update
+	apt-get -y install make g++
+	apt install -y protobuf-compiler
+	protoc --version
+
+build: install
 	make install-protocol-buffer
 	make get-protocol-buffer-dependencies
 	make use-ssh-for-bitbucket
