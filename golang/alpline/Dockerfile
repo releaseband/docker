@@ -1,4 +1,4 @@
-FROM golang:1.17.11-alpine3.16
+FROM releaseband/alpine:3.16.1
 
 MAINTAINER Ayaz Ayupov ayaz@releaseband.com
 
