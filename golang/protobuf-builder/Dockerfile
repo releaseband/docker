@@ -1,4 +1,4 @@
-FROM golang:1.17.11
+FROM golang:1.25rc3
 
 COPY Makefile .
 RUN make build
